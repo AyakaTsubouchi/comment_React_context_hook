@@ -1,3 +1,7 @@
+This project doesn't work well so far.
+I need to implement delete and edit function.
+Exept for that, I believe it works.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
