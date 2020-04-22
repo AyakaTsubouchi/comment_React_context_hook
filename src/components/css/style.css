@@ -1,0 +1,6 @@
+.field {
+  display: flex;
+}
+.field input {
+  width: 100px;
+}
