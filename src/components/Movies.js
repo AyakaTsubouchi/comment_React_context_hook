@@ -7,9 +7,9 @@ export default function Movies() {
         width="912"
         height="513"
         src="https://www.youtube.com/embed/35lXWvCuM8o"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+        allowFullScreen></iframe>
     </div>
   );
 }

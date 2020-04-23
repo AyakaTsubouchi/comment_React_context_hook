@@ -4,28 +4,18 @@ import axios from 'axios';
 export const CommentContext = createContext();
 
 export const CommentProvider = (props) => {
-  const [comments, setComments] = useState(defaultList);
-  //const [comments, setComments] = useState([]);
-  // useEffect(() => {
-  //   defaultComments();
-  // }, []);
+  // const [comments, setComments] = useState(defaultList);
+  const [comments, setComments] = useState([]);
+  useEffect(() => {
+    defaultComments();
+  }, []);
 
-  // const defaultComments = () => {
-  //   axios.get('https://jsonplaceholder.typicode.com/comments').then((res) => {
-  //     console.log(res.data);
-  //     setComments([
-  //       ...comments,
-
-  //       {
-  //         ostId: res.data.ostId,
-  //         id: res.data.id,
-  //         name: res.data.name,
-  //         email: res.data.email,
-  //         body: res.data.body,
-  //       },
-  //     ]);
-  //   });
-  // };
+  const defaultComments = () => {
+    axios.get('https://jsonplaceholder.typicode.com/comments').then((res) => {
+      console.log(res.data);
+      setComments(res.data);
+    });
+  };
 
   return (
     <CommentContext.Provider value={[comments, setComments]}>

@@ -6,7 +6,7 @@ const CommentNav = () => {
   return (
     <>
       <div className="ui container">
-        <h4 class="ui dividing header">{comments.length} comments</h4>
+        <h4 className="ui dividing header">{comments.length} comments</h4>
       </div>
     </>
   );

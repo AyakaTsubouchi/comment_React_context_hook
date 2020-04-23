@@ -1,11 +1,12 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { CommentContext } from './CommentContext';
+import axios from 'axios';
 
 const CommentList = () => {
   const [comments, setComments] = useContext(CommentContext);
   const handleDelete = (e) => {
-    setComments(comments.filter((comment) => comment.id !== 2)); //it works
-    //setComments(comments.filter((comment) => comment.id !== e.target.id)); //it doesn't work
+    // setComments(comments.filter((comment) => comment.id !== 2)); //it works
+    setComments(comments.filter((comment) => comment.id != e.target.id)); //it doesn't work
     console.log(e.target.id); //it returns number
   };
 
